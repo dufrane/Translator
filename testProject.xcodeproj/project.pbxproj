@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B484A842D63A22900F2A277 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B484A832D63A22900F2A277 /* Constants.swift */; };
+		5B683A2B2D6068B300838E6B /* ResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B683A2A2D6068B300838E6B /* ResultModel.swift */; };
+		5B683A2F2D60692700838E6B /* ResultPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B683A2E2D60692700838E6B /* ResultPresenter.swift */; };
+		5B683A332D606AEE00838E6B /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B683A322D606AEE00838E6B /* SettingsModel.swift */; };
+		5B683A352D606B5000838E6B /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B683A342D606B5000838E6B /* SettingsPresenter.swift */; };
 		5B905AE52D5BADF400C52A6C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B905AD02D5BADF400C52A6C /* MainViewController.swift */; };
 		5B905AE62D5BADF400C52A6C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B905AD12D5BADF400C52A6C /* SettingsViewController.swift */; };
 		5B905AEA2D5BADF400C52A6C /* BottomNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B905ADE2D5BADF400C52A6C /* BottomNavigationView.swift */; };
@@ -17,9 +22,9 @@
 		5B905B0B2D5C582F00C52A6C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B905B082D5C582F00C52A6C /* SceneDelegate.swift */; };
 		5B905B732D5C81C300C52A6C /* bitrate.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5B905B722D5C81C300C52A6C /* bitrate.gif */; };
 		5B905B752D5C847000C52A6C /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B905B742D5C847000C52A6C /* ResultViewController.swift */; };
-		5B905B772D5C857900C52A6C /* TranslationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B905B762D5C857900C52A6C /* TranslationData.swift */; };
 		5B905B7C2D5C9D2F00C52A6C /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B905B7B2D5C9D2F00C52A6C /* SettingsCell.swift */; };
 		5B905B7E2D5C9D6900C52A6C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B905B7D2D5C9D6900C52A6C /* DetailViewController.swift */; };
+		5B905BB02D5E69F600C52A6C /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B905BAF2D5E69F600C52A6C /* MainPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,9 +45,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B484A832D63A22900F2A277 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5B5001E82D551CB600CBD14B /* testProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B5001FE2D551CB700CBD14B /* testProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B5002082D551CB700CBD14B /* testProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B683A2A2D6068B300838E6B /* ResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultModel.swift; sourceTree = "<group>"; };
+		5B683A2E2D60692700838E6B /* ResultPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultPresenter.swift; sourceTree = "<group>"; };
+		5B683A322D606AEE00838E6B /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
+		5B683A342D606B5000838E6B /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
 		5B905AD02D5BADF400C52A6C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		5B905AD12D5BADF400C52A6C /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		5B905ADB2D5BADF400C52A6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -54,22 +64,12 @@
 		5B905B082D5C582F00C52A6C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5B905B722D5C81C300C52A6C /* bitrate.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = bitrate.gif; path = /Users/dmytrovasylenko/Project/backupOfTestProject/testProject/Resources/bitrate.gif; sourceTree = "<absolute>"; };
 		5B905B742D5C847000C52A6C /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
-		5B905B762D5C857900C52A6C /* TranslationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationData.swift; sourceTree = "<group>"; };
 		5B905B7B2D5C9D2F00C52A6C /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 		5B905B7D2D5C9D6900C52A6C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		5B905BAF2D5E69F600C52A6C /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		5B5002012D551CB700CBD14B /* testProjectTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = testProjectTests;
-			sourceTree = "<group>";
-		};
-		5B50020B2D551CB700CBD14B /* testProjectUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = testProjectUITests;
-			sourceTree = "<group>";
-		};
 		5B905B172D5C593100C52A6C /* Extensions */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = Extensions;
@@ -107,6 +107,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B484A822D63A20B00F2A277 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				5B484A832D63A22900F2A277 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		5B5001DF2D551CB600CBD14B = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +133,38 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		5B683A2C2D6068E900838E6B /* ResultView */ = {
+			isa = PBXGroup;
+			children = (
+				5B905B742D5C847000C52A6C /* ResultViewController.swift */,
+			);
+			path = ResultView;
+			sourceTree = "<group>";
+		};
+		5B683A2D2D60691400838E6B /* ResultPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				5B683A2E2D60692700838E6B /* ResultPresenter.swift */,
+			);
+			path = ResultPresenter;
+			sourceTree = "<group>";
+		};
+		5B683A302D606AB500838E6B /* SettingsModel */ = {
+			isa = PBXGroup;
+			children = (
+				5B683A322D606AEE00838E6B /* SettingsModel.swift */,
+			);
+			path = SettingsModel;
+			sourceTree = "<group>";
+		};
+		5B683A312D606AC200838E6B /* SettingsPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				5B683A342D606B5000838E6B /* SettingsPresenter.swift */,
+			);
+			path = SettingsPresenter;
+			sourceTree = "<group>";
+		};
 		5B905B012D5C57F000C52A6C /* testProject */ = {
 			isa = PBXGroup;
 			children = (
@@ -133,7 +173,6 @@
 				5B905B0E2D5C587100C52A6C /* Modules */,
 				5B905B0F2D5C58AF00C52A6C /* Components */,
 				5B905B102D5C58D600C52A6C /* Resources */,
-				5B905B122D5C58FA00C52A6C /* Tests */,
 			);
 			path = testProject;
 			sourceTree = "<group>";
@@ -150,6 +189,7 @@
 		5B905B0D2D5C584B00C52A6C /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				5B484A822D63A20B00F2A277 /* Constants */,
 				5B905B172D5C593100C52A6C /* Extensions */,
 			);
 			path = Common;
@@ -186,37 +226,29 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		5B905B122D5C58FA00C52A6C /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				5B5002012D551CB700CBD14B /* testProjectTests */,
-				5B50020B2D551CB700CBD14B /* testProjectUITests */,
-			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
 		5B905B242D5C5A3F00C52A6C /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				5B905B262D5C5A8700C52A6C /* Model */,
 				5B905B292D5C5B2400C52A6C /* View */,
 				5B905B2A2D5C5B2C00C52A6C /* Presenter */,
 			);
 			path = Main;
 			sourceTree = "<group>";
 		};
-		5B905B262D5C5A8700C52A6C /* Model */ = {
+		5B905B262D5C5A8700C52A6C /* ResultModel */ = {
 			isa = PBXGroup;
 			children = (
+				5B683A2A2D6068B300838E6B /* ResultModel.swift */,
 			);
-			path = Model;
+			path = ResultModel;
 			sourceTree = "<group>";
 		};
 		5B905B272D5C5AB000C52A6C /* Result */ = {
 			isa = PBXGroup;
 			children = (
-				5B905B742D5C847000C52A6C /* ResultViewController.swift */,
-				5B905B762D5C857900C52A6C /* TranslationData.swift */,
+				5B905B262D5C5A8700C52A6C /* ResultModel */,
+				5B683A2C2D6068E900838E6B /* ResultView */,
+				5B683A2D2D60691400838E6B /* ResultPresenter */,
 			);
 			path = Result;
 			sourceTree = "<group>";
@@ -224,7 +256,9 @@
 		5B905B282D5C5AEF00C52A6C /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				5B905B2B2D5C5B6E00C52A6C /* View */,
+				5B683A302D606AB500838E6B /* SettingsModel */,
+				5B905B2B2D5C5B6E00C52A6C /* SettingsView */,
+				5B683A312D606AC200838E6B /* SettingsPresenter */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -240,18 +274,19 @@
 		5B905B2A2D5C5B2C00C52A6C /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				5B905BAF2D5E69F600C52A6C /* MainPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
 		};
-		5B905B2B2D5C5B6E00C52A6C /* View */ = {
+		5B905B2B2D5C5B6E00C52A6C /* SettingsView */ = {
 			isa = PBXGroup;
 			children = (
 				5B905AD12D5BADF400C52A6C /* SettingsViewController.swift */,
 				5B905B7B2D5C9D2F00C52A6C /* SettingsCell.swift */,
 				5B905B7D2D5C9D6900C52A6C /* DetailViewController.swift */,
 			);
-			path = View;
+			path = SettingsView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,9 +328,6 @@
 			dependencies = (
 				5B5002002D551CB700CBD14B /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				5B5002012D551CB700CBD14B /* testProjectTests */,
-			);
 			name = testProjectTests;
 			packageProductDependencies = (
 			);
@@ -315,9 +347,6 @@
 			);
 			dependencies = (
 				5B50020A2D551CB700CBD14B /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				5B50020B2D551CB700CBD14B /* testProjectUITests */,
 			);
 			name = testProjectUITests;
 			packageProductDependencies = (
@@ -401,17 +430,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B683A2F2D60692700838E6B /* ResultPresenter.swift in Sources */,
 				5B905B0A2D5C582F00C52A6C /* AppDelegate.swift in Sources */,
-				5B905B772D5C857900C52A6C /* TranslationData.swift in Sources */,
 				5B905AE52D5BADF400C52A6C /* MainViewController.swift in Sources */,
 				5B905B7E2D5C9D6900C52A6C /* DetailViewController.swift in Sources */,
+				5B683A2B2D6068B300838E6B /* ResultModel.swift in Sources */,
 				5B905AE62D5BADF400C52A6C /* SettingsViewController.swift in Sources */,
 				5B905AEA2D5BADF400C52A6C /* BottomNavigationView.swift in Sources */,
 				5B905AEB2D5BADF400C52A6C /* MicrophoneView.swift in Sources */,
 				5B905AEC2D5BADF400C52A6C /* PetSelectionView.swift in Sources */,
 				5B905B0B2D5C582F00C52A6C /* SceneDelegate.swift in Sources */,
+				5B905BB02D5E69F600C52A6C /* MainPresenter.swift in Sources */,
+				5B683A332D606AEE00838E6B /* SettingsModel.swift in Sources */,
 				5B905B752D5C847000C52A6C /* ResultViewController.swift in Sources */,
 				5B905B7C2D5C9D2F00C52A6C /* SettingsCell.swift in Sources */,
+				5B683A352D606B5000838E6B /* SettingsPresenter.swift in Sources */,
+				5B484A842D63A22900F2A277 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

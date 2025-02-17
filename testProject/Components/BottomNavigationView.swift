@@ -29,7 +29,7 @@ class BottomNavigationView: UIView {
     }()
 
     private let translatorImageView: UIImageView = {
-        let imageView = UIImageView(image: UIImage(named: "chat"))
+        let imageView = UIImageView(image: AssetImages.chat.image)
         imageView.tintColor = .specialText
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -37,7 +37,7 @@ class BottomNavigationView: UIView {
     }()
 
     private let settingsImageView: UIImageView = {
-        let imageView = UIImageView(image: UIImage(named: "settings"))
+        let imageView = UIImageView(image: AssetImages.settings.image)
         imageView.tintColor = .specialText
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false

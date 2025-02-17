@@ -8,6 +8,11 @@
 import UIKit
 import AVFoundation
 
+protocol MainViewProtocol: AnyObject {
+    func updatePetImage(_ image: UIImage)
+    func showMicrophoneAccessAlert()
+}
+
 class MainViewController: UIViewController, PetSelectionViewDelegate, BottomNavigationViewDelegate, MicrophoneViewDelegate {
 
     private var recordingSession: AVAudioSession!
@@ -39,7 +44,7 @@ class MainViewController: UIViewController, PetSelectionViewDelegate, BottomNavi
     private let largePetImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
-        imageView.image = UIImage(named: "cat")
+        imageView.image = AssetImages.cat.image
         imageView.layer.cornerRadius = 16
         imageView.clipsToBounds = true
         imageView.translatesAutoresizingMaskIntoConstraints = false

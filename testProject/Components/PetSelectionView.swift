@@ -125,8 +125,7 @@ class PetSelectionView: UIView {
             self.blueSquare.alpha = self.isCatSelected ? 1.0 : 0.6
             self.greenSquare.alpha = self.isCatSelected ? 0.6 : 1.0
         }
-        let selectedImage = isCatSelected ? UIImage(named: "cat") : UIImage(named: "dog")
-        print("viewTapped: selected image: \(isCatSelected ? "cat" : "dog")") // Debug
+        let selectedImage = isCatSelected ? AssetImages.cat.image : AssetImages.dog.image
         delegate?.didSelectPet(image: selectedImage)
     }
 }

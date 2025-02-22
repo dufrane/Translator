@@ -19,7 +19,7 @@ class MicrophoneView: UIView {
 
     private let micImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "microphone") ?? UIImage(systemName: "mic.circle")
+        imageView.image = AssetImages.microphone.image
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
@@ -38,7 +38,7 @@ class MicrophoneView: UIView {
     private let recordingGifView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
-        imageView.isHidden = true // Спочатку прихована
+        imageView.isHidden = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()

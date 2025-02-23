@@ -13,10 +13,12 @@ protocol MainViewProtocol: AnyObject {
     func showMicrophoneAccessAlert()
 }
 
-class MainViewController: UIViewController, PetSelectionViewDelegate, BottomNavigationViewDelegate, MicrophoneViewDelegate {
+class MainViewController: UIViewController, MainViewProtocol {
 
     private var recordingSession: AVAudioSession!
     private var audioRecorder: AVAudioRecorder!
+    
+    var presenter: MainPresenterProtocol?
     
     private let titleLabel: UILabel = {
         let label = UILabel()
@@ -38,7 +40,6 @@ class MainViewController: UIViewController, PetSelectionViewDelegate, BottomNavi
     }()
     
     private let microphoneButton = MicrophoneView()
-    
     private let petSelectionView = PetSelectionView()
 
     private let largePetImageView: UIImageView = {
@@ -87,9 +88,27 @@ class MainViewController: UIViewController, PetSelectionViewDelegate, BottomNavi
         print("Pet Human button tapped")
     }
 
-// MARK: - MicrophoneViewDelegate
+    // MARK: - MainViewProtocol
+    func updatePetImage(_ image: UIImage) {
+        DispatchQueue.main.async {
+            self.largePetImageView.image = image
+        }
+    }
+
+    func showMicrophoneAccessAlert() {
+        let alert = UIAlertController(title: "Enable Microphone Access",
+                                      message: "Please enable microphone access in settings.",
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        present(alert, animated: true)
+    }
+}
+
+// MARK: - Delegates
+extension MainViewController: PetSelectionViewDelegate, BottomNavigationViewDelegate, MicrophoneViewDelegate {
+    
     func didStartRecording() {
-        print("Record in progress...")
+        print("Recording started...")
     }
 
     func didStopRecording() {
@@ -97,25 +116,20 @@ class MainViewController: UIViewController, PetSelectionViewDelegate, BottomNavi
             print("Error: did not found animal image!")
             return
         }
-
-        let resultVC = ResultViewController(petImage: selectedPetImage)
-        navigationController?.pushViewController(resultVC, animated: true)
+        presenter?.recordingStopped(with: selectedPetImage)
     }
 
     func didSelectPet(image: UIImage?) {
-        print("didSelectPet called, image changed to: \(String(describing: image))")
-        DispatchQueue.main.async {
-            self.largePetImageView.image = image
-        }
+        guard let image = image else { return }
+        presenter?.petSelected(image: image)
     }
-    
+
     func didTapTranslator() {
         navigationController?.popToRootViewController(animated: true)
     }
-        
+    
     func didTapSettings() {
-        let settingsVC = SettingsViewController()
-        navigationController?.pushViewController(settingsVC, animated: true)
+        presenter?.openSettings()
     }
 }
 

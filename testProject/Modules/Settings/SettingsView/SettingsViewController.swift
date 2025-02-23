@@ -32,7 +32,6 @@ final class SettingsViewController: UIViewController, SettingsViewProtocol {
     }()
     
     private var settingsOptions: [SettingsOption] = []
-
     var presenter: SettingsPresenterProtocol?
 
     private let bottomNavigationView = BottomNavigationView()
@@ -42,7 +41,6 @@ final class SettingsViewController: UIViewController, SettingsViewProtocol {
         view.backgroundColor = .specialBackground
 
         bottomNavigationView.delegate = self
-
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(SettingsCell.self, forCellReuseIdentifier: "SettingsCell")
@@ -66,7 +64,7 @@ final class SettingsViewController: UIViewController, SettingsViewProtocol {
         navigationController?.setNavigationBarHidden(true, animated: true)
     }
 
-    func loadSettingsOptions() {
+    private func loadSettingsOptions() {
         settingsOptions = presenter?.getSettingsOptions() ?? []
         tableView.reloadData()
     }
@@ -110,7 +108,7 @@ extension SettingsViewController: BottomNavigationViewDelegate {
     }
 
     func didTapSettings() {
-        print("Вже в Settings, нічого не робимо")
+        print("Already in settings")
     }
 }
 

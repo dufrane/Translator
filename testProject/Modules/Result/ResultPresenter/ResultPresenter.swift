@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Alamofire
 
 protocol ResultPresenterProtocol: AnyObject {
     func fetchFact()
@@ -19,20 +20,19 @@ final class ResultPresenter: ResultPresenterProtocol {
     }
 
     func fetchFact() {
-        guard let url = URL(string: "https://uselessfacts.jsph.pl/api/v2/facts/random") else { return }
+        let url = "https://uselessfacts.jsph.pl/api/v2/facts/random"
 
-        let task = URLSession.shared.dataTask(with: url) { [weak self] data, _, error in
-            guard let data = data, error == nil else { return }
-
-            do {
-                let fact = try JSONDecoder().decode(Fact.self, from: data)
-                DispatchQueue.main.async {
-                    self?.view?.showFact(fact.text)
+        AF.request(url, method: .get)
+            .validate()
+            .responseDecodable(of: Fact.self) { response in
+                switch response.result {
+                case .success(let fact):
+                    DispatchQueue.main.async {
+                        self.view?.showFact(fact.text)
+                    }
+                case .failure(let error):
+                    print("Request error: \(error.localizedDescription)")
                 }
-            } catch {
-                print("Failed to decode:", error)
             }
-        }
-        task.resume()
     }
 }

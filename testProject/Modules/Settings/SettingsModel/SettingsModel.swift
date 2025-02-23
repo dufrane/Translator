@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SettingsOption {
+struct SettingsOption: Codable {
     let title: String
 }
 

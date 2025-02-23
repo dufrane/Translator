@@ -5,6 +5,7 @@
 *.xcodeproj/xcuserdata/
 *.xcodeproj/project.xcworkspace/xcuserdata/
 *.xcodeproj/project.xcworkspace/xcshareddata/
+*.xcodeproj/project.pbxproj/
 *.xcodeproj/xcshareddata/
 DerivedData/
 .DS_Store

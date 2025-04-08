@@ -7,20 +7,20 @@
 
 import UIKit
 
-class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    var mainRouter: MainRouter?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
+        let navigationController = UINavigationController()
+        mainRouter = MainRouter(navigationController: navigationController)
+        mainRouter?.start()
+
         window = UIWindow(windowScene: windowScene)
-                let navigationController = UINavigationController(rootViewController: MainViewController()) 
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
         window?.overrideUserInterfaceStyle = .light
-        
     }
-
 }
-
